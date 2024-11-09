@@ -30,7 +30,7 @@ int main(int argc, char** argv) {
 
     image_pub = nh.advertise<sensor_msgs::Image>("/image_resized", 1);
 
-    cv::Mat frame = cv::imread("/home/rasya/Documents/ROBOTIK/FINAL_PROJECT/FINAL/final_project_ws/src/FP_Magang/bola1.jpg");
+    cv::Mat frame = cv::imread("/home/rasya/Documents/ROBOTIK/FINAL_PROJECT/fp_ws/src/bola3.jpg");
 
     if (frame.empty()) {
         ROS_ERROR("Failed to load image.");
@@ -46,7 +46,7 @@ int main(int argc, char** argv) {
         ros::spinOnce();
 
         loop_rate.sleep();
-        
+
     }
 
     return 0;
